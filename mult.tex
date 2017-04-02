@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\title{\LARGE{Vedic Multiplication Method } }
+\date{March 6, 2017}
+\author{Ginuga Saketh}
+
+
+\geometry{
+	a4paper,
+		total={210mm,297mm},
+		left=30mm,
+		right=30mm,
+		top=15mm,
+		bottom=15mm,
+}
+
+\begin{document}
+\maketitle
+
+\section{\Large{Introduction}}
+\hfill In general while multiplying, we multiply each digit of multiplier to multiplicand and add it to the product after shifting appropriately.
+But, here we describe an easier method for multiplying two-digit numbers which was originally described in \href{https://en.wikipedia.org/wiki/Atharvaveda}{Atharvaveda}.
+In this method there are two possible cases,which are discussed in the following sections.
+
+\section{\Large{Case 1: }\large{Same first digit and sum of last digits is 10}}
+\subsection{\large{Illustration}}
+\hfill Consider that first(tens' place) digit of both numbers is same
+and the sum of last(ones' place) two digits is equal to 10.
+Let's take an example of multiplying two nuumbers $66$ and $64$ which is shown in the following figure.
+\hfill \break
+%\includegraphics[width = 40mm, height = 40mm]{case1.pdf}
+\subsection{\large{Explanation}}
+\hspace{3mm} Let \textit{a} be tens' place digit in both the numbers.
+Let \textit{b} and \textit{c} be the ones' place digits such that $b + c = 10$. 
+So, here we can obtain the first two digits of the resultant product by multiplying \textit{a} and \textit{a+1}.
+The last two digits can be obtained by multiplying \textit{b} and \textit{c}. We can unserstand this like multiplying $a*10+b$ with $a*10+c$ we get first two places
+from the first two places of $a*10*(a*10+10)$ i.e. $a*(a+1)$ and last two places are obtained from $b*c$
+\subsection{\large{Analysis}}
+\hspace{3mm} For analysing this method we compare it with the normal multiplication we usually perform to show that the vedic multiplication is much better and faster for this case. 
+\hfill \break
+\begin{tabular}{|c|c|c|c|}
+\hline
+Method  &  Multiplication Steps  &  Addition Steps  &  Total steps \footnote{We assume that multiplication and addition of two digits have equal effort.} \\
+	\hline
+	Vedic Multiplication  &  2  &  1  & 3\\
+	\hline
+	Normal Multiplication  & 4  &  4  & 8\\
+	\hline
+	\end{tabular}
+	\hfill \break
+	\hspace{3mm} Hence, as we can see from the above\footnote{hello} 
+\end{tabluar}
+\end{document}
