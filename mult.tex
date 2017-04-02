@@ -83,6 +83,64 @@ Method  &  Multiplication Steps  &  Addition Steps  &  Total steps \footnote{We 
 the numbers the first $n$ digits must be equal and the sum of the last $m$ digit numbers must be
 equal to $10^m$.\\
 \hspace{3mm} Let $a_{n}$ be the value of first $n$ digits and, $b_{m}$ and $c_{m}$ be the last m digits of two numbers. So,the first $2*n$ digits of the product will be from $a_{n}*(a_{n}+1)$ and the last $2*m$ digits will be from $b_{m}*c_{m}$
+%Case 2
+\section{\Large{Case 2:\cite{vedanta} }\large{Same last digit and sum of first digits is 10}}
+\subsection{\large{Illustration}}
+\hfill Consider that last(ones' place) digit of both numbers is same
+and the sum of first(tens' place) two digits is equal to 10.
+Let's take an example of multiplying two nuumbers $34$ and $74$ which is shown in the following figure.
+\hfill \break
+\includegraphics[width = 40mm, height = 40mm]{case2.pdf}
+
+\subsection{\large{Explanation}}\label{ssec:exp2}
+\hspace{3mm} Let \textit{a} be ones' place digit in both the numbers.
+Let \textit{b} and \textit{c} be the tens' place digits such that $b + c = 10$. 
+So, here we can obtain the first two digits of the resultant product by multiplying \textit{b} and \textit{c} and adding \textit{a}.
+The last two digits can be obtained by multiplying \textit{a} with itself. We can unserstand this like multiplying $b*10+a$ with $c*10+a$ we get first two places
+from the first two places of $100*(b*c+a)$ i.e. $b*c+a$ and last two places are obtained from $a*a$
+\subsection{\large{Analysis}}
+\hspace{3mm} For analysing this method we compare it with the normal multiplication we usually perform to show that the vedic multiplication is much better and faster for this case. 
+\hfill \break
+\begin{table}[h]
+\label{table:2}
+\caption{Table 2: Vedic vs Normal}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Method  &  Multiplication Steps  &  Addition Steps  &  Total steps\footnotemark\\
+	\hline
+	Vedic Multiplication  &  2  &  1  & 3\\
+	\hline
+	Normal Multiplication  & 4  &  4  & 8\\
+	\hline
+\end{tabular}
+\end{table}
+	\hfill \break
+ 	\footnotetext{We assume that multiplication and addition of two digits have equal effort.} 
+	\hspace{3mm} Hence, as we can see from the above Table \ref{table:2} that Vedic Multiplication is much more simpler and faster than normal multiplication.
+\subsection{Algebraic Analysis}
+\hspace{3mm} As mentioned in the \ref{ssec:exp2} Explanation, we consider two numbers with same last digit a and first two digits b and c.
+\begin{align}
+	Sum\ of\ first\ digits = b+c = 10 \label{eq:cond2}
+\end{align}
+\begin{align}
+	Product &= (b*10 + a) * (c*10 +a) \\
+			&= 100*b*c + 10*a*c + 10*a*b +a*a \\
+			&= 100*b*c + 10*a*(b+c) + a*a (From \eqref{eq:cond2})\\
+	Product &= 100*(b*c + a) + a*a \label{eq:2}
+\end{align}
+\hspace{3mm} Hence, from Equation \eqref{eq:2}, we can see that $b*c+a$ gives the first digits and $a*a$ gives last two digits.
+\subsection{Pseudocode}
+\begin{algorithm}
+\caption{Vedic Multiplication 2}
+\begin{algorithmic}
+\Procedure{Vedic-Multiplication-2}{ab,ac}
+	\State $First \gets b*c+a$
+	\State $Last \gets a*a$
+	\State $Product \gets 100*First + Last$ \\
+	\Return $Product$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
 
 
 \end{document}
