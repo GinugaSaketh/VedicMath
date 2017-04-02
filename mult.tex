@@ -66,4 +66,23 @@ Method  &  Multiplication Steps  &  Addition Steps  &  Total steps \footnote{We 
 \end{align}
 \hspace{3mm} Hence, from Equation \eqref{eq:1}, we can see that $a*(a+1)$ gives the first digits and $b*c$ gives last two digits.
 
+\subsection{Pseudocode}
+\begin{algorithm}
+\caption{Vedic Multiplication 1}
+\begin{algorithmic}
+\Procedure{Vedic-Multiplication-1}{ab,ac}
+	\State $First \gets a*(a+1)$
+	\State $Last \gets b*c$
+	\State $Product \gets 100*First + Last$ \\
+	\Return $Product$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+\subsection{Generalization}
+\hspace{3mm} We can generalize for numbers containing $n+m$ digits satisfying few similar conditions. Here, for both
+the numbers the first $n$ digits must be equal and the sum of the last $m$ digit numbers must be
+equal to $10^m$.\\
+\hspace{3mm} Let $a_{n}$ be the value of first $n$ digits and, $b_{m}$ and $c_{m}$ be the last m digits of two numbers. So,the first $2*n$ digits of the product will be from $a_{n}*(a_{n}+1)$ and the last $2*m$ digits will be from $b_{m}*c_{m}$
+
+
 \end{document}
