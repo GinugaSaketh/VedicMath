@@ -53,4 +53,17 @@ Method  &  Multiplication Steps  &  Addition Steps  &  Total steps \footnote{We 
 	\hfill \break
 	\hspace{3mm} Hence, as we can see from the above\footnote{hello} 
 \end{tabluar}
+\subsection{Algebraic Analysis}
+\hspace{3mm} As mentioned in the \ref{ssec:exp1} Explanation, we consider two numbers with same first digit a and last two digits b and c.
+\begin{align}
+	Sum\ of\ last\ digits = b+c = 10 \label{eq:cond1}
+\end{align}
+\begin{align}
+	Product &= (a*10 + b) * (a*10 +c) \\
+			&= 100*a*a + 10*a*c + 10*a*b +b*c \\
+			&= 10*a*(a*10+10) + b*c  (From \eqref{eq:cond1})\\
+	Product &= 100*a*(a + 1) + b*c \label{eq:1}
+\end{align}
+\hspace{3mm} Hence, from Equation \eqref{eq:1}, we can see that $a*(a+1)$ gives the first digits and $b*c$ gives last two digits.
+
 \end{document}
